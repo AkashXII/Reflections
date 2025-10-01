@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useEffect } from "react";
+import "tailwindcss";
 
 export default function AuthForm({onLogin}){
 const [email,setEmail]=useState('')
@@ -80,5 +81,4 @@ return (
     </form>
   </div>
 );
-
 }
