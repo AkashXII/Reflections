@@ -1,7 +1,19 @@
 import express from "express"
 import { supabase } from "../db/supabaseClient.js";
+import fetch from "node-fetch"
 
 const router=express.Router()
+
+router.get("/quote",async(req,res)=>{
+    try{
+        const response=await fetch("https://zenquotes.io/api/random")
+        const data=await response.json()
+        res.json(data)
+    }
+    catch(err){
+        res.status(500).json({error:"failed to fetch quote"})
+    }
+})
 
 router.get("/", async(req,res)=>{
     const{user_id}=req.query
