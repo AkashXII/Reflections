@@ -28,6 +28,7 @@ A simple full-stack learning journaling app where users can **sign up, sign in, 
 - `mood` (string)  
 - `entry_date` (timestamp, default: now)  
 
-##Small Glimpse :)
-./screenshots/ss1.png
-./screenshots/ss2.png
+## Small Glimpse :)
+
+![Screenshot 1](./screenshots/ss1.png)  
+![Screenshot 2](./screenshots/ss2.png)
