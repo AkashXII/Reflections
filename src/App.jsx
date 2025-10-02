@@ -1,23 +1,11 @@
-import { useState } from "react";
-import AuthForm from "./components/AuthForm";  // ✅ correct path
+import { useState, useEffect } from "react";
+import AuthForm from "./components/AuthForm";
+import ReflectionForm from "./components/ReflectionForm";
+import ReflectionList from "./components/ReflectionList";
+import { supabase } from "./supabaseClient";
 
-export default function App() {
-  const [user, setUser] = useState(null);
+function App() {
 
-  return (
-    <div>
-      {!user ? (
-        // If no user logged in → show the AuthForm
-        <AuthForm onLogin={(loggedInUser) => setUser(loggedInUser)} />
-      ) : (
-        // If user logged in → show a welcome screen
-        <div className="min-h-screen flex items-center justify-center bg-green-50">
-          <div className="bg-white p-6 rounded-xl shadow-md text-center">
-            <h1 className="text-2xl font-bold mb-4">Welcome, {user.email} 🎉</h1>
-            <p>You’re now signed in!</p>
-          </div>
-        </div>
-      )}
-    </div>
-  );
 }
+
+export default App;
