@@ -1,13 +1,14 @@
 import { useState } from "react";
 import { useEffect } from "react";
 import "tailwindcss";
+import { supabase } from "../supabaseClient"; 
 
 export default function AuthForm({onLogin}){
 const [email,setEmail]=useState('')
 const [password,setPassword]=useState('')
 const [mode,setMode]=useState('signin')
-const [loading,setLoading]=useState('false')
-const [error,setError]=useState('null')
+const [loading,setLoading]=useState(false)
+const [error,setError]=useState(null)
 
 async function handleSubmit(e){
     e.preventDefault()
