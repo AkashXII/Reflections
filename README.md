@@ -1,16 +1,33 @@
-# React + Vite
+# Reflections App
+A simple full-stack learning journaling app where users can **sign up, sign in, and write daily reflections** inspired by random quotes. Built with **React, Express, Supabase, and TailwindCSS**. Simple learning project used to learn the flow of code :)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Features
+- User authentication (sign up / sign in with Supabase)  
+- Write reflections tied to your account  
+- Random motivational quote for inspiration  
+- Mood selection (Happy, Calm, Stressed, Sad, Excited)  
+- Each reflection is timestamped  
+- Delete reflections with instant UI updates  
+- Clean, nature-inspired design using TailwindCSS  
 
-Currently, two official plugins are available:
+## Tech Stack
+**Frontend:**  
+- React (Vite)  
+- TailwindCSS  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Backend:**  
+- Node.js + Express  
+- Supabase (Auth + Database)  
+- REST API routes for CRUD operations  
 
-## React Compiler
+**Database (Supabase Table `reflections`):**  
+- `id` (primary key)  
+- `user_id` (FK → Supabase auth user)  
+- `quote` (string)  
+- `reflection_text` (string)  
+- `mood` (string)  
+- `entry_date` (timestamp, default: now)  
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+##Small Glimpse :)
+./screenshots/ss1.png
+./screenshots/ss2.png
